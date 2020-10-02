@@ -11,6 +11,11 @@ Where is "CAM01" - name of camera
 
 2. Add to Cron running movetovideoarchive every day
 
+Example:
+```
+10 * * * *   root /home/spider/movetovideoarchive /etc/motion/motion.conf
+```
+
 ### Usage
 ```sh
 ./movetovideoarchive full_path_to_file_motion.conf
@@ -30,6 +35,11 @@ movie_filename CAM01-%Y%m%d%H%M%S
 Где "CAM01" - имя камеры
 
 2. Добавьте в Cron запуск movetovideoarchive ежедневно
+
+Пример:
+```
+10 * * * *   root /home/spider/movetovideoarchive /etc/motion/motion.conf
+```
 ### Использование
 ```sh
 ./movetovideoarchive full_path_to_file_motion.conf

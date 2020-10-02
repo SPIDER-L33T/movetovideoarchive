@@ -20,9 +20,9 @@ Example:
 ./movetovideoarchive /etc/motion/motion.conf
 ```
 ## RUS
-### Description
+### Описание
 Утилита для создания видеоархива видеофайлов, созданных демоном [Motion](https://github.com/Motion-Project/motion)
-### Requirements
+### Требования
 1. В конфиге камеры параметр movie_filename должен быть:
 ```
 movie_filename CAM01-%Y%m%d%H%M%S

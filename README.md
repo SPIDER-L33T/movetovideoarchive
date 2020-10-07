@@ -24,6 +24,12 @@ Example:
 ```sh
 ./movetovideoarchive /etc/motion/motion.conf
 ```
+If your camera profiles are divided into different files (camera1.conf, camera2.conf, etc.) and each camera has its own directory for storing video files (individual parameter "target_dir"), then you can simply run the utility with different parameters
+```sh
+./movetovideoarchive /etc/motion/camera1.conf
+./movetovideoarchive /etc/motion/camera2.conf
+./movetovideoarchive /etc/motion/camera3.conf
+```
 ## RUS
 ### Описание
 Утилита для создания видеоархива видеофайлов, созданных демоном [Motion](https://github.com/Motion-Project/motion)
@@ -47,4 +53,10 @@ movie_filename CAM01-%Y%m%d%H%M%S
 Пример:
 ```sh
 ./movetovideoarchive /etc/motion/motion.conf
+```
+Если у Вас профили камер разбиты по разным файлам (camera1.conf, camera2.conf и т.д.) и у каждой камеры своя директория хранения видеофайлов (индивидуальный параметр "target_dir"), то можно просто запускать утилиту с разными параметрами:
+```sh
+./movetovideoarchive /etc/motion/camera1.conf
+./movetovideoarchive /etc/motion/camera2.conf
+./movetovideoarchive /etc/motion/camera3.conf
 ```

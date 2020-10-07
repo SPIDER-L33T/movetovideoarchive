@@ -35,8 +35,7 @@ func main() {
 			year := string(fn[1][0:4])
 			month := string(fn[1][4:6])
 			day := string(fn[1][6:8])
-			newpath := targetpath+"/"+archivename+"/"+year+"/"+month+"/"+day+"/"+fn[0]
-			fmt.Println("newpath: "+newpath)
+			newpath := targetpath+"/"+archivename+"/"+year+"/"+month+"/"+day+"/"+fn[0]			
 			os.MkdirAll(newpath, os.ModePerm)
 			err := os.Rename(targetpath+"/"+f.Name(), newpath+"/"+f.Name())
 			if err != nil {
@@ -59,10 +58,12 @@ func getsourcePath() bool {
 	reader := bufio.NewReader(file)
 	eql := 0
 	for {
-		line, err := reader.ReadString('\n')
-		if equal := strings.Index(line, "target_dir"); equal >= 0 {
+		line, err := reader.ReadString('\n')		
+		if strings.HasPrefix(line, "target_dir") {			
 			s := strings.Split(line, " ")
 			targetpath = strings.TrimSpace(s[1])
+			eql = 0
+			break
 		}else{
 			eql++			
 		}
